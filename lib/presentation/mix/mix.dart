@@ -178,33 +178,160 @@ class _MixState extends State<Mix> {
               child: Row(
                 children: [
                   SizedBox(
-                      width: 0.70.sw,
-                      height: 3.2.sh,
-                      child: ListView.builder(
+                      width: 0.72.sw,
+                      height: 2.6.sh,
+                      child: ListView.separated(
                           physics: const NeverScrollableScrollPhysics(),
-                          itemCount: 7,
+                          itemCount: 3,
                           itemBuilder: (ctx, ind) {
                             return Container(
-                              margin: EdgeInsets.symmetric(vertical: 10.h),
-                              child: AnalysisContainer(
-                                  containerWidth: double.infinity,
-                                  containerHeight: 0.4.sh,
-                                  paddingHorizontal: 0,
-                                  imageWidth: 0.25.sw,
-                                  sizeWidth: 0.4.sw,
-                                  typeSize: 14,
-                                  sizeBetween: 5.w,
-                                  titleSize: 26.sp,
-                                  textSize: 20.sp,
-                                  dateSize: 14.sp,
-                                  buttonHeight: 40.h,
-                                  buttonWidth: 30.w,
-                                  buttonSp: 14.sp),
+                              width: 0.7.sw,
+                              height: 0.4.sh,
+                              child:  Row(
+                                children: [
+                                  Container(
+                                    width: 0.35.sw,
+                                    height: 0.4.sh,
+                                    decoration: BoxDecoration(
+                                        borderRadius: BorderRadius.circular(5),
+                                        image: DecorationImage(
+                                            fit: BoxFit.cover,
+                                            image: NetworkImage(
+                                                'http://images.unsplash.com/photo-1549740425-5e9ed4d8cd34?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxjb2xsZWN0aW9uLXBhZ2V8MXwzOTU0NTB8fGVufDB8fHx8&w=1000&q=80'))),
+                                  ),
+                                  SizedBox(
+                                    width: 0.35.sw,
+                                    child: Column(
+                                      mainAxisAlignment: MainAxisAlignment.spaceAround,
+                                      children: [
+                                        Container(
+                                          padding: EdgeInsets.only(
+                                              top: 6.h, bottom: 0.h, left: 2.w, right: 2.w),
+                                          color: ColorManger.goldenRed,
+                                          child: Text(
+                                            "FOOD",
+                                            style: TextStyle(
+                                                fontWeight: FontWeight.bold,
+                                                fontSize: 14.sp,
+                                                color: ColorManger.white),
+                                          ),
+                                        ),
+                                        Container(
+                                          width: 0.33.sw,
+                                          child: Text(
+                                            "This is ContainerView2 This is ContainerView2 This is ContainerView2",
+                                            style: TextStyle(
+                                                color: ColorManger.textColor,
+                                                fontSize: 28.sp,
+                                                fontWeight: FontWeight.bold),
+                                          ),
+                                        ),
+                                        Container(
+                                          alignment: Alignment.topLeft,
+                                          width: 0.33.sw,
+                                          child: Text(
+                                            "This is ContainerView2 This is ContainerView2 This is ContainerView2",
+                                            style: TextStyle(
+                                                color: ColorManger.gray,
+                                                fontSize: 20.sp,
+                                                fontWeight: FontWeight.w500),
+                                          ),
+                                        ),
+                                        Container(
+                                          alignment: Alignment.center,
+                                            width: 0.35.sw,
+                                            child: Text(
+                                              "December 9,2022",
+                                              style: TextStyle(
+                                                  fontSize: 14.sp,
+                                                  color: ColorManger.gray,
+                                                  fontWeight: FontWeight.bold),
+                                            )),
+                                        InkWell(
+                                            child: Container(
+                                              alignment: Alignment.center,
+                                              height:40.h,
+                                              width: 30.w,
+                                              child: Text(
+                                                "READ MORE",
+                                                style:
+                                                TextStyle(color: ColorManger.gray, fontSize: 14.sp),
+                                              ),
+                                              decoration: BoxDecoration(
+                                                  borderRadius: BorderRadius.circular(5),
+                                                  border: Border.all(color: ColorManger.gray)),
+                                            )),
+                                      ],
+                                    ),
+                                  )
+                                ],
+                              )
                             );
-                          })),
+                          },
+                   separatorBuilder: (BuildContext context, int index) =>  Container(
+                       width: 0.7.sw,
+                       height: 0.4.sh,
+                       child:  Row(
+                         children: [
+                           SizedBox(
+                             width: 0.35.sw,
+                             child: Column(
+                               mainAxisAlignment: MainAxisAlignment.spaceAround,
+                               children: [
+                                 Container(
+                                   padding: EdgeInsets.only(
+                                       top: 6.h, bottom: 0.h, left: 2.w, right: 2.w),
+                                   color: ColorManger.goldenRed,
+                                   child: Text(
+                                     "FOOD",
+                                     style: TextStyle(
+                                         fontWeight: FontWeight.bold,
+                                         fontSize: 14.sp,
+                                         color: ColorManger.white),
+                                   ),
+                                 ),
+                                 Container(
+                                   width: 0.33.sw,
+                                   child: Text(
+                                     "This is ContainerView2 This is ContainerView2 This is ContainerView2",
+                                     style: TextStyle(
+                                         color: ColorManger.textColor,
+                                         fontSize: 28.sp,
+                                         fontWeight: FontWeight.bold),
+                                   ),
+                                 ),
+                                 Container(
+                                     alignment: Alignment.center,
+                                     width: 0.35.sw,
+                                     child: Text(
+                                       "December 9,2022",
+                                       style: TextStyle(
+                                           fontSize: 14.sp,
+                                           color: ColorManger.gray,
+                                           fontWeight: FontWeight.bold),
+                                     )),
+                               ],
+                             ),
+                           ),
+                           Container(
+                             width: 0.35.sw,
+                             height: 0.4.sh,
+                             decoration: BoxDecoration(
+                                 borderRadius: BorderRadius.circular(5),
+                                 image: DecorationImage(
+                                     fit: BoxFit.cover,
+                                     image: NetworkImage(
+                                         'http://images.unsplash.com/photo-1549740425-5e9ed4d8cd34?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxjb2xsZWN0aW9uLXBhZ2V8MXwzOTU0NTB8fGVufDB8fHx8&w=1000&q=80'))),
+                           ),
+
+                         ],
+                       )
+                   )
+                          )),
+
                   SizedBox(
-                    height: 3.2.sh,
-                    width: 0.23.sw,
+                    height: 2.6.sh,
+                    width: 0.22.sw,
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.start,
                       children: [

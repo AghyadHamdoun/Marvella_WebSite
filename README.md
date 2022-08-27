@@ -1,6 +1,6 @@
 # marvella
 
-A new Flutter project.
+Flutter Web project.
 
 ## Getting Started
 

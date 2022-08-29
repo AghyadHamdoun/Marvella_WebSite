@@ -984,7 +984,7 @@ class _MixState extends State<Mix> {
                                 gridDelegate:
                                 SliverGridDelegateWithMaxCrossAxisExtent(
                                     maxCrossAxisExtent: 0.44.sw,
-                                    childAspectRatio: 5/6,
+                                    childAspectRatio: 3/4,
                                     crossAxisSpacing: 10,
                                     mainAxisSpacing: 10),
                                 itemCount: 6,
@@ -1000,7 +1000,6 @@ class _MixState extends State<Mix> {
                         ],
                       ),
                     ),
-                    SizedBox(height: 20.h,),
                     SizedBox(
                       height: 0.65.sh,
                       width: 0.9.sw,
